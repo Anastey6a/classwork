@@ -5,18 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-
-function circleArea(radius) {
-  return Math.PI * Math.pow(radius, 2);
-}
-const radius = 5;
-console.log("Площа кола з радіусом " + radius + " одиниць: " + circleArea(radius));
-
-
+        // ..1 дз
+            let birth = prompt("Введіть рік народження:");
+            let city = prompt("Введіть місто, в якому ви живете:");
+            let favoriteSport = prompt("Введіть ваш улюблений вид спорту:");
+            let currentYear = new Date().getFullYear();
+            let age = currentYear - parseInt(birth);
+            let cityMessage;
+            if (city === "Київ") {
+                cityMessage = "Ти живеш у столиці України, Києві.";
+            } else if (city === "Вашингтон") {
+                cityMessage = "Ти живеш у столиці США, Вашингтоні.";
+            } else if (city === "Лондон") {
+                cityMessage = "Ти живеш у столиці Великої Британії, Лондоні.";
+            } else {
+                cityMessage = "Ти живеш у місті " + city + ".";
+            }
+            alert(
+                "Твій вік: " + age + " років.\n" +
+                cityMessage + "\n" +
+                "Твій улюблений вид спорту: " + favoriteSport
+            );
+        // ..2 дз..
+        let birthYear = prompt("Введіть рік народження:");
+        if (birthYear === null) {
+            alert("Шкода, що Ви не захотіли ввести свій рік народження.");
+        } else {
+            let city = prompt("Введіть місто, в якому ви живете:");
+            if (city === null) {
+                alert("Шкода, що Ви не захотіли ввести своє місто.");
+            } else {
+            
+                let favoriteSport = prompt("Введіть ваш улюблений вид спорту:");
+                if (favoriteSport === null) {
+                    alert("Шкода, що Ви не захотіли ввести свій улюблений вид спорту.");
+                } else {
+                
+                    let currentYear = new Date().getFullYear();
+                    let age = currentYear - parseInt(birthYear);
+                    let cityMessage;
+                    if (city === "Київ") {
+                        cityMessage = "Ти живеш у столиці України, Києві.";
+                    } else if (city === "Вашингтон") {
+                        cityMessage = "Ти живеш у столиці США, Вашингтоні.";
+                    } else if (city === "Лондон") {
+                        cityMessage = "Ти живеш у столиці Великої Британії, Лондоні.";
+                    } else {
+                        cityMessage = "Ти живеш у місті " + city + ".";
+                    }
+                    if (favoriteSport === "футбол") {
+                        alert("Круто! Хочеш стати футбольним чемпіоном? Наприклад, Ліонель Мессі.");
+                    } else if (favoriteSport === "теніс") {
+                        alert("Круто! Хочеш стати тенісним чемпіоном? Наприклад, Рафаель Надаль.");
+                    } else if (favoriteSport === "баскетбол") {
+                        alert("Круто! Хочеш стати баскетбольним чемпіоном? Наприклад, Леброн Джеймс.");
+                    } else {
+                        alert("Круто! Хочеш стати чемпіоном у своєму улюбленому виді спорту?");
+                    }
+                }
+            }
+        }
 
     </script>
 </head>
 <body>
-    <h1>hello from html</h1>
+    
 </body>
 </html>
